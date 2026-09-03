@@ -1,0 +1,9 @@
+/dist/
+/go.work
+/go.work.sum
+/.rayleabot/
+/coverage.out
+/.tmp/
+/output/
+/.playwright-cli/
+/.impeccable/review/

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["title", "date", "update_label", "updated_at", "source", "cache_label", "cached", "entries", "count"],
+  "properties": {
+    "title": {"type": "string", "minLength": 1, "maxLength": 24},
+    "render_footer": {"type": "string"},
+    "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "update_label": {"type": "string", "minLength": 1, "maxLength": 64},
+    "updated_at": {"type": "string", "minLength": 1, "maxLength": 32},
+    "source": {"type": "string", "minLength": 1, "maxLength": 64},
+    "cache_label": {"type": "string", "minLength": 1, "maxLength": 16},
+    "cached": {"type": "boolean"},
+    "entries": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "required": ["index", "map_name", "password", "location"],
+        "properties": {
+          "index": {"type": "string"},
+          "map_name": {"type": "string", "minLength": 1, "maxLength": 24},
+          "password": {"type": "string", "pattern": "^\\d{4}$"},
+          "location": {"type": "string", "maxLength": 200}
+        },
+        "additionalProperties": false
+      }
+    },
+    "count": {"type": "integer", "minimum": 6, "maximum": 12}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="data:," />
+    <style>{{ .Stylesheet }}</style>
+  </head>
+  <body>
+    {{ safeHTML "<!-- THESIS: 每日密码是一份可现场核对的密封调度单，不使用六张相同信息卡。 OWN-WORLD: 墨黑工作台、安保橙日期封条、骨白清单纸、直角框线和装订孔组成唯一视觉语言。 STORY: 用户先确认日期与数据状态，再按固定地图顺序读取四位密码和位置，最后核对来源更新时间。 FIRST VIEWPORT: 左侧约三成显示日期、状态和数量；右侧六行调度单完整展示地图、密码与位置。 FORM: 货运查验清单，grounded direction 6，seed 2e2cc0c4。 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance -->" }}
+    <main class="password-sheet">
+      <aside class="dispatch-tag">
+        <div class="dispatch-tag__binder" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="dispatch-tag__brand">三角洲助手</p>
+        <h1>{{ .title }}</h1>
+        <time>{{ .date }}</time>
+        <div class="dispatch-tag__status">
+          <span>数据状态</span>
+          <strong>{{ .cache_label }}</strong>
+        </div>
+        <dl>
+          <div><dt>覆盖地图</dt><dd>{{ .count }} 张</dd></div>
+          <div><dt>数据日期</dt><dd>{{ .update_label }}</dd></div>
+        </dl>
+      </aside>
+
+      <section class="dispatch-list">
+        <header>
+          <div><h2>地图密码调度单</h2><p>四位数字保留前导零，请按地图核对</p></div>
+          <div class="dispatch-list__seal">DAILY<br />ACCESS</div>
+        </header>
+        <div class="dispatch-list__columns" aria-hidden="true"><span>地图 / 位置</span><span>今日密码</span></div>
+        <ol>
+          {{ range .entries }}
+          <li>
+            <span class="dispatch-row__index">{{ .index }}</span>
+            <div class="dispatch-row__map"><strong>{{ .map_name }}</strong><span>{{ .location }}</span></div>
+            <code>{{ .password }}</code>
+          </li>
+          {{ end }}
+        </ol>
+        <footer>
+          <p>来源：{{ .source }}</p>
+          <div class="dispatch-list__provenance">
+            <span>更新时间 {{ .updated_at }}</span>
+            {{ with .render_footer }}<span>{{ . }}</span>{{ end }}
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "source_version": "community-tier-v1",
+  "containers": [
+    {"id":"large-safe","name":"大保险箱","aliases":["大保险","大保险柜","保险箱","保险柜"],"profile":"s","min_items":2,"max_items":3,"categories":["craft","electronics"]},
+    {"id":"small-safe","name":"小保险箱","aliases":["小保险","小保险柜"],"profile":"s","min_items":1,"max_items":1,"categories":["craft","electronics"]},
+    {"id":"aviation-crate","name":"航空储物箱","aliases":["航空箱","航空储物柜"],"profile":"s","min_items":2,"max_items":4,"categories":["electronics","intel","energy","medical","tools","household","equipment"]},
+    {"id":"computer","name":"电脑","aliases":["办公电脑","台式电脑"],"profile":"s","min_items":1,"max_items":2,"categories":["electronics","intel"]},
+    {"id":"server","name":"服务器","aliases":["服务器机柜","机柜"],"profile":"s","min_items":1,"max_items":3,"categories":["electronics"]},
+    {"id":"lab-coat","name":"实验服","aliases":["白衣","白衣服","实验白衣"],"profile":"s","min_items":1,"max_items":2,"categories":["intel","keycard","craft","electronics","medical","household"]},
+    {"id":"medical-pile","name":"医疗物资堆","aliases":["医疗堆","医疗物资"],"profile":"s","min_items":2,"max_items":3,"categories":["medical"]},
+
+    {"id":"large-weapon-crate","name":"大武器箱","aliases":["大武器","高级武器箱"],"profile":"a","min_items":2,"max_items":3,"categories":["weapon","ammo","tools","electronics"]},
+    {"id":"advanced-storage","name":"高级储物箱","aliases":["高级储物柜","高级箱"],"profile":"a","min_items":2,"max_items":3,"categories":["household","medical","electronics","intel","energy"]},
+    {"id":"hiking-pack","name":"登山包","aliases":["登山背包","大背包"],"profile":"a","min_items":2,"max_items":4,"categories":["household","craft","electronics","medical","tools","energy"]},
+    {"id":"advanced-suitcase","name":"高级旅行箱","aliases":["高级行李箱","大旅行箱"],"profile":"a","min_items":1,"max_items":3,"categories":["craft","household"]},
+    {"id":"computer-case","name":"电脑机箱","aliases":["机箱","主机"],"profile":"a","min_items":1,"max_items":2,"categories":["electronics","intel"]},
+    {"id":"ammo-crate","name":"弹药箱","aliases":["子弹箱","弹药盒"],"profile":"a","min_items":2,"max_items":3,"categories":["ammo","energy","tools"]},
+    {"id":"tool-cabinet","name":"工具柜","aliases":["工具橱柜"],"profile":"a","min_items":1,"max_items":3,"categories":["tools","medical","energy"]},
+    {"id":"clothes","name":"衣服","aliases":["普通衣服","衣物"],"profile":"a","min_items":1,"max_items":2,"categories":["intel","keycard","craft","electronics","household","medical"]},
+    {"id":"bird-nest","name":"鸟窝","aliases":["鸟巢"],"profile":"a","min_items":1,"max_items":2,"categories":["craft","electronics","intel","energy","medical","tools","household"]},
+    {"id":"cement-truck","name":"水泥车","aliases":["水泥罐车","罐车"],"profile":"a","min_items":1,"max_items":3,"categories":["craft","tools"]},
+
+    {"id":"large-toolbox","name":"大工具盒","aliases":["大工具箱","工具盒"],"profile":"b","min_items":1,"max_items":3,"categories":["tools","electronics","energy"]},
+    {"id":"medical-bag","name":"医疗包","aliases":["医药包","医疗箱"],"profile":"b","min_items":1,"max_items":2,"categories":["medical"]},
+    {"id":"travel-bag","name":"旅行袋","aliases":["旅行包","行李袋"],"profile":"b","min_items":1,"max_items":2,"categories":["household","tools","intel","medical"]},
+    {"id":"briefcase","name":"手提箱","aliases":["公文包","公文箱"],"profile":"b","min_items":1,"max_items":2,"categories":["craft","intel"]},
+    {"id":"locker","name":"储物柜","aliases":["普通储物柜","柜子"],"profile":"b","min_items":1,"max_items":2,"categories":["household","medical","electronics","intel"]},
+    {"id":"field-crate","name":"野外物资箱","aliases":["野外箱","物资箱"],"profile":"b","min_items":1,"max_items":3,"categories":["equipment","energy","medical","tools","electronics"]},
+    {"id":"manhole","name":"井盖","aliases":["下水道井盖","井口"],"profile":"b","min_items":1,"max_items":2,"categories":["craft","electronics","intel","energy","medical","tools","household"]},
+    {"id":"drawer","name":"抽屉柜","aliases":["抽屉","文件柜"],"profile":"b","min_items":1,"max_items":2,"categories":["craft","intel","medical","household"]},
+
+    {"id":"trash","name":"垃圾箱","aliases":["垃圾桶"],"profile":"c","min_items":1,"max_items":2,"categories":["craft","intel","tools","household","medical","energy"]},
+    {"id":"courier-crate","name":"快递箱","aliases":["快递盒","渡鸦快递箱"],"profile":"c","min_items":1,"max_items":2,"categories":["energy","medical","tools","household"]},
+    {"id":"computer-bag","name":"电脑包","aliases":["笔记本包"],"profile":"c","min_items":1,"max_items":2,"categories":["keycard","electronics","medical"]}
+  ]
+}

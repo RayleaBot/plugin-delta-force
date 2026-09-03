@@ -1,0 +1,82 @@
+{
+  "id": "raylea.delta-force",
+  "name": "三角洲助手",
+  "version": "0.1.0",
+  "manifest_version": "3",
+  "license": "AGPL-3.0-only",
+  "min_core_version": "0.4.0",
+  "metadata": {
+    "description": "《三角洲行动》摸容器模拟与每日密码查询",
+    "author": "raylea",
+    "keywords": ["delta-force", "loot", "password", "render"]
+  },
+  "concurrency": 8,
+  "events": ["message.group", "message.private"],
+  "permissions": {
+    "message.send": true,
+    "http.request": true,
+    "render.image": true
+  },
+  "default_config": {
+    "password_api_url": "https://db.18183.com/sjzmm/data/daily/{date}.json",
+    "password_cache_minutes": 30,
+    "password_timeout_seconds": 8
+  },
+  "commands": [
+    {
+      "id": "loot-compact",
+      "name": "摸容器",
+      "description": "按容器物品池进行一次娱乐摸金模拟",
+      "usage": "/摸航空箱",
+      "permission": "everyone",
+      "trigger": {
+        "type": "pattern",
+        "pattern": "^摸\\S{1,20}$"
+      }
+    },
+    {
+      "id": "loot-spaced",
+      "name": "摸容器（空格写法）",
+      "description": "按容器物品池进行一次娱乐摸金模拟",
+      "usage": "/摸 航空箱",
+      "permission": "everyone",
+      "trigger": {
+        "type": "exact",
+        "names": ["摸"]
+      }
+    },
+    {
+      "id": "loot-containers",
+      "name": "可摸容器",
+      "description": "查看当前支持的容器和常用别名",
+      "usage": "/可摸容器",
+      "permission": "everyone",
+      "trigger": {
+        "type": "exact",
+        "names": ["可摸容器"]
+      }
+    },
+    {
+      "id": "daily-password",
+      "name": "三角洲密码",
+      "description": "查询北京时间当天的地图密码",
+      "usage": "/三角洲密码",
+      "permission": "everyone",
+      "trigger": {
+        "type": "exact",
+        "names": ["三角洲密码", "每日密码"]
+      }
+    }
+  ],
+  "command_groups": [
+    {
+      "id": "delta-force",
+      "title": "三角洲助手",
+      "commands": ["loot-compact", "loot-spaced", "loot-containers", "daily-password"]
+    }
+  ],
+  "help": {
+    "title": "三角洲助手",
+    "summary": "摸容器模拟与每日密码查询"
+  }
+}

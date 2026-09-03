@@ -1,0 +1,19 @@
+{
+  "title": "每日密码",
+  "render_footer": "Created By RayleaBot 开发版本 & Plugin 三角洲助手 0.1.0",
+  "date": "2026-09-03",
+  "update_label": "模板预览数据（非实时）",
+  "updated_at": "2026-09-03 10:08:21",
+  "source": "模板预览数据（非实时）",
+  "cache_label": "实时校验",
+  "cached": false,
+  "entries": [
+    {"index":"01","map_name":"AZ3核电站","password":"0123","location":"海水处理区西侧独栋玻璃房间"},
+    {"index":"02","map_name":"零号大坝","password":"0456","location":"主变电站与游客中心之间的地下管道尽头"},
+    {"index":"03","map_name":"长弓溪谷","password":"0789","location":"地图右下角荒废村庄下方地下入口"},
+    {"index":"04","map_name":"巴克什","password":"1011","location":"老浴场北侧一楼房间"},
+    {"index":"05","map_name":"航天基地","password":"1213","location":"工业区组装室二楼"},
+    {"index":"06","map_name":"潮汐监狱","password":"1415","location":"监狱行政区一楼大厅楼梯拐角处"}
+  ],
+  "count": 6
+}

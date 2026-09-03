@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="data:," />
+    <style>{{ .Stylesheet }}</style>
+  </head>
+  <body>
+    {{ safeHTML "<!-- THESIS: 摸金结果是一张刚完成查验的货单，不使用游戏面板式卡片堆砌。 OWN-WORLD: 墨黑工作台、安保橙货签、骨白清单纸、直角框线和装订孔组成唯一视觉语言。 STORY: 用户先看到容器与最高品质，再沿货单逐项核对名称、品质和类别，最后确认模拟声明。 FIRST VIEWPORT: 左侧约三成是橙色货签与查验结论，右侧是四行以内的白色货单；结果、人员和时间不需要滚动。 FORM: 货运查验清单，grounded direction 6，seed 2e2cc0c4。 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance -->" }}
+    <main class="loot-sheet loot-sheet--{{ .grade_key }}">
+      <aside class="cargo-tag">
+        <div class="cargo-tag__binder" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+        <p class="cargo-tag__brand">三角洲助手</p>
+        <h1>{{ .title }}</h1>
+        <div class="cargo-tag__stamp">
+          <span>查验结论</span>
+          <strong>{{ .grade }}</strong>
+        </div>
+        <dl class="cargo-tag__meta">
+          <div><dt>容器档位</dt><dd>{{ .profile }}</dd></div>
+          <div><dt>物品数量</dt><dd>{{ .item_count }} 件</dd></div>
+          <div><dt>货单编号</dt><dd>{{ .serial }}</dd></div>
+        </dl>
+      </aside>
+
+      <section class="manifest">
+        <header class="manifest__header">
+          <div>
+            <h2>战利品查验单</h2>
+            <p>{{ .actor_name }} · {{ .time }}</p>
+          </div>
+          <div class="manifest__seal">LOOT<br />CHECK</div>
+        </header>
+
+        <div class="manifest__columns" aria-hidden="true">
+          <span>序号 / 类别</span><span>物品名称</span><span>品质</span>
+        </div>
+        <ol class="loot-list">
+          {{ range .items }}
+          <li class="loot-row loot-row--{{ .rarity_key }}">
+            <div class="loot-row__identity"><span class="loot-row__index">{{ .index }}</span><span class="loot-row__mark">{{ .category_short }}</span></div>
+            <div class="loot-row__name"><strong>{{ .name }}</strong><span>{{ .category }}</span></div>
+            <div class="loot-row__rarity"><b></b><span>{{ .rarity }}</span></div>
+          </li>
+          {{ end }}
+        </ol>
+
+        <footer class="manifest__footer">
+          <p>{{ .simulation_notice }}</p>
+          <div class="manifest__provenance">
+            <span>CATALOG {{ .container_source }} / {{ .item_source }}</span>
+            {{ with .render_footer }}<span>{{ . }}</span>{{ end }}
+          </div>
+        </footer>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "id": "delta-passwords",
+  "version": "1",
+  "entry_html": "template.html",
+  "stylesheet": "styles.css",
+  "input_schema": "input.schema.json",
+  "width": 1120,
+  "height": 850
+}

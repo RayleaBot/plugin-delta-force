@@ -1,0 +1,21 @@
+{
+  "title": "航空储物箱",
+  "render_footer": "Created By RayleaBot 开发版本 & Plugin 三角洲助手 0.1.0",
+  "profile": "高价值",
+  "grade": "红色收获",
+  "grade_key": "red",
+  "items": [
+    {"index":"01","name":"军用信息终端","rarity":"金色","rarity_key":"gold","category":"电子物品","category_short":"电子"},
+    {"index":"02","name":"碳纤维板","rarity":"红色","rarity_key":"red","category":"工具材料","category_short":"工具"},
+    {"index":"03","name":"四级头盔","rarity":"紫色","rarity_key":"purple","category":"装备","category_short":"装备"},
+    {"index":"04","name":"实验数据","rarity":"金色","rarity_key":"gold","category":"资料情报","category_short":"资料"}
+  ],
+  "item_count": 4,
+  "actor_name": "测试干员",
+  "actor_id": "10001",
+  "time": "2026-09-03 20:26:18",
+  "serial": "DF-260903-001",
+  "container_source": "community-tier-v1",
+  "item_source": "curated-loot-v1",
+  "simulation_notice": "娱乐模拟概率，不代表游戏实际掉落"
+}

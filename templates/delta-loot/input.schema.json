@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["title", "profile", "grade", "grade_key", "items", "item_count", "actor_name", "time", "serial", "simulation_notice"],
+  "properties": {
+    "title": {"type": "string", "minLength": 1, "maxLength": 32},
+    "render_footer": {"type": "string"},
+    "profile": {"type": "string", "minLength": 1, "maxLength": 16},
+    "grade": {"type": "string", "minLength": 1, "maxLength": 16},
+    "grade_key": {"type": "string", "enum": ["white", "green", "blue", "purple", "gold", "red"]},
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["index", "name", "rarity", "rarity_key", "category", "category_short"],
+        "properties": {
+          "index": {"type": "string"},
+          "name": {"type": "string", "minLength": 1, "maxLength": 40},
+          "rarity": {"type": "string", "minLength": 1},
+          "rarity_key": {"type": "string", "enum": ["white", "green", "blue", "purple", "gold", "red"]},
+          "category": {"type": "string", "minLength": 1},
+          "category_short": {"type": "string", "minLength": 1, "maxLength": 4}
+        },
+        "additionalProperties": false
+      }
+    },
+    "item_count": {"type": "integer", "minimum": 1, "maximum": 8},
+    "actor_name": {"type": "string", "minLength": 1, "maxLength": 80},
+    "actor_id": {"type": "string", "maxLength": 80},
+    "time": {"type": "string", "minLength": 1},
+    "serial": {"type": "string", "minLength": 1, "maxLength": 40},
+    "container_source": {"type": "string"},
+    "item_source": {"type": "string"},
+    "simulation_notice": {"type": "string", "minLength": 1, "maxLength": 80}
+  },
+  "additionalProperties": false
+}

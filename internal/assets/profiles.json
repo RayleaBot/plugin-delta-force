@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "profiles": [
+    {
+      "id": "s",
+      "label": "高价值",
+      "weights": {"white": 0, "green": 500, "blue": 3500, "purple": 4500, "gold": 1400, "red": 100}
+    },
+    {
+      "id": "a",
+      "label": "优质",
+      "weights": {"white": 500, "green": 1500, "blue": 4000, "purple": 3200, "gold": 750, "red": 50}
+    },
+    {
+      "id": "b",
+      "label": "常规",
+      "weights": {"white": 2000, "green": 3000, "blue": 3500, "purple": 1200, "gold": 280, "red": 20}
+    },
+    {
+      "id": "c",
+      "label": "基础",
+      "weights": {"white": 4000, "green": 3500, "blue": 2000, "purple": 450, "gold": 45, "red": 5}
+    }
+  ]
+}
